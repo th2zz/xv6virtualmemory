@@ -379,3 +379,13 @@ copyout(pde_t *pgdir, uint va, void *p, uint len)
   }
   return 0;
 }
+
+
+void* shmget(int page_number) {
+
+	cprintf("hellllllllllllllllllllllllllo!!!!!!!!!\n");
+	if(page_number < 0 || page_number > 2) return NULL;
+
+	return (void*)0x1000;
+	
+}
